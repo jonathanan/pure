@@ -107,6 +107,7 @@ prompt_pure_preprompt_render() {
 	# been delayed.
 	local git_color=242
 	[[ -n ${prompt_pure_git_last_dirty_check_timestamp+x} ]] && git_color=red
+	[[ -n ${prompt_pure_git_dirty} ]] && git_color=red
 
 	# Initialize the preprompt array.
 	local -a preprompt_parts
